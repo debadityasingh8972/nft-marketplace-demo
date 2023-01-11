@@ -9,8 +9,8 @@ import {
   Subscribe,
   Title,
   Category,
-  Filter
-  // NFTCard,
+  Filter,
+  NFTCard
   // Collection,
   // AudioLive,
   // FollowerTab,
@@ -72,9 +72,8 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <Filter />
-      {/*
-      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
-      */}
+      {/* {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />} */}
+      <NFTCard />
       <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."
