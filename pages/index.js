@@ -10,8 +10,8 @@ import {
   Title,
   Category,
   Filter,
-  NFTCard
-  // Collection,
+  NFTCard,
+  Collection
   // AudioLive,
   // FollowerTab,
   // Slider,
@@ -65,8 +65,12 @@ const Home = () => {
       )}
 
       <Slider />
-      <Collection />
       */}
+      <Title
+        heading="New Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <Collection />
       <Title
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life."
