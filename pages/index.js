@@ -11,9 +11,9 @@ import {
   Category,
   Filter,
   NFTCard,
-  Collection
+  Collection,
   // AudioLive,
-  // FollowerTab,
+  FollowerTab
   // Slider,
   // Brand,
   // Video,
@@ -70,6 +70,7 @@ const Home = () => {
         heading="New Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
+      <FollowerTab />
       <Collection />
       <Title
         heading="Featured NFTs"
