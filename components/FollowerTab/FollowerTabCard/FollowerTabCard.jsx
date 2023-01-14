@@ -65,7 +65,7 @@ const FollowerTabCard = ({ i, el }) => {
                             <a onClick={() => followMe()}>
                                 Follow{""}{" "}
                                 <span>
-                                    <TiTick />
+                                    <TiTick/>
                                 </span>
                             </a>
                         ) : (
