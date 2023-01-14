@@ -12,7 +12,7 @@ import {
   Filter,
   NFTCard,
   Collection,
-  // AudioLive,
+  AudioLive,
   FollowerTab
   // Slider,
   // Brand,
@@ -51,13 +51,12 @@ const Home = () => {
       <HeroSection />      
       <Service />
       <BigNFTSlider />
-      {/*
       <Title
         heading="Audio Collection"
-        paragraph="Discover the most outstanding NFTs in all topics of life."
+        paragraph="Discover the most outstanding Audio NFTs."
       />
-      {/*
       <AudioLive />
+      {/*
       {creators.length == 0 ? (
         <Loader />
       ) : (
