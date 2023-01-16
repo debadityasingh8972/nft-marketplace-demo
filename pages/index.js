@@ -14,8 +14,8 @@ import {
   Collection,
   AudioLive,
   FollowerTab,
-  Slider
-  // Brand,
+  Slider,
+  Brand
   // Video,
   // Loader,
 } from "../components/componentsindex";
@@ -85,10 +85,8 @@ const Home = () => {
       />
       <Category />
       <Subscribe />
-      {/*
       <Brand />
-      <Video /> 
-      */}
+      {/* <Video />  */}
     </div>
   );
 };
