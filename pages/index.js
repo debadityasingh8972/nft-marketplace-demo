@@ -70,11 +70,6 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <FollowerTab />
-
-      <Title
-        heading="Explore NFTs Video"
-        paragraph="Click on play icon and enjoy NFTs video"
-      />
       <Slider />
       <Collection />
       <Title
