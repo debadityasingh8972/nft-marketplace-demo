@@ -13,8 +13,8 @@ import {
   NFTCard,
   Collection,
   AudioLive,
-  FollowerTab
-  // Slider,
+  FollowerTab,
+  Slider
   // Brand,
   // Video,
   // Loader,
@@ -62,14 +62,20 @@ const Home = () => {
       ) : (
         <FollowerTab TopCreator={creators} />
       )}
-
-      <Slider />
       */}
+      
+      
       <Title
         heading="New Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <FollowerTab />
+
+      <Title
+        heading="Explore NFTs Video"
+        paragraph="Click on play icon and enjoy NFTs video"
+      />
+      <Slider />
       <Collection />
       <Title
         heading="Featured NFTs"
