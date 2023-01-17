@@ -35,7 +35,7 @@ const Slider = () => {
             user: images.user2,
         },
     ];
-    const sliderArray = [1,2,3,4,5,6,7];
+    // const sliderArray = [1,2,3,4,5,6,7];
 
     const [width, setWidth] = useState(0);
     const dragSlider = useRef();

@@ -11,45 +11,43 @@ import FollowerTabCard from "./FollowerTabCard/FollowerTabCard";
 import images from "../../img";
 
 const FollowerTab = ({ TopCreator }) => {
-    const CardArray = [1,2,3,4,5,6,7,8];
-    const FollowingArray = [1,2,3,4,5,6];
-    const NewsArray = [1,2,3,4,5];
-  // const CardArray = [
-  //   {
-  //     background: images.creatorbackground1,
-  //     user: images.user1,
-  //   },
-  //   {
-  //     background: images.creatorbackground2,
-  //     user: images.user2,
-  //   },
-  //   {
-  //     background: images.creatorbackground3,
-  //     user: images.user3,
-  //   },
-  //   {
-  //     background: images.creatorbackground4,
-  //     user: images.user4,
-  //   },
-  //   {
-  //     background: images.creatorbackground5,
-  //     user: images.user5,
-  //   },
-  //   {
-  //     background: images.creatorbackground6,
-  //     user: images.user6,
-  //   },
-  //   {
-  //     background: images.creatorbackground7,
-  //     user: images.user7,
-  //   },
-  //   {
-  //     background: images.creatorbackground8,
-  //     user: images.user8,
-  //   },
-  // ];
-
-{/*
+    // const CardArray = [images.user1, images.user2, images.user3, images.user4, images.user5, images.user6, images.user7];
+    // const FollowingArray = [images.user4, images.user6, images.user3, images.user2, images.user1, images.user5];
+    // const NewsArray = [images.user4, images.user7, images.user1, images.user2, images.user3];
+    const CardArray = [
+        {
+            background: images.creatorbackground1,
+            user: images.user1,
+        },
+        {
+            background: images.creatorbackground2,
+            user: images.user2,
+        },
+        {
+            background: images.creatorbackground3,
+            user: images.user3,
+        },
+        {
+            background: images.creatorbackground4,
+            user: images.user4,
+        },
+        {
+            background: images.creatorbackground5,
+            user: images.user5,
+        },
+        {
+            background: images.creatorbackground6,
+            user: images.user6,
+        },
+        {
+            background: images.creatorbackground7,
+            user: images.user7,
+        },
+        {
+            background: images.creatorbackground8,
+            user: images.user8,
+        },
+    ];
     const FollowingArray = [
     {
         background: images.creatorbackground3,
@@ -81,7 +79,7 @@ const FollowerTab = ({ TopCreator }) => {
         user: images.user2,
         seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
-];
+    ];
     const NewsArray = [
     {
         background: images.creatorbackground1,
@@ -123,7 +121,7 @@ const FollowerTab = ({ TopCreator }) => {
         user: images.user8,
         seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
-];*/}
+    ];
 
     const [popular, setPopular] = useState(true);
     const [following, setFollowing] = useState(false);
