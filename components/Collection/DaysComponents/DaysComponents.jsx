@@ -15,7 +15,7 @@ const DaysComponents = ({ el, i }) => {
                         src={el.background}
                         className={Style.daysComponent_box_img_img}
                         alt="profile background"
-                        width={500}
+                        width={647}
                         height={300}
                         objectFit="covers"
                     />

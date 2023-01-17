@@ -104,10 +104,6 @@ const Collection = () => {
         background: images.creatorbackground7,
         user: images.user7,
     },
-    {
-        background: images.creatorbackground8,
-        user: images.user8,
-    },
 ];
 
     const openPopular = () => {
