@@ -5,50 +5,49 @@ import Style from "../styles/collection.module.css";
 import images from "../img";
 import {
     Banner,
-    CollectionProfile
-    // NFTCardTwo,
+    collectionProfile,
+    NFTCardTwo,
 } from "../collectionPage/collectionIndex";
 import { Slider, Brand } from "../components/componentsindex";
 import Filter from "../components/Filter/Filter";
 
 const collection = () => {
-    // const collectionArray = [
-    //     {
-    //         image: images.nft_image_1,
-    //     },
-    //     {
-    //         image: images.nft_image_2,
-    //     },
-    //     {
-    //         image: images.nft_image_3,
-    //     },
-    //     {
-    //         image: images.nft_image_1,
-    //     },
-    //     {
-    //         image: images.nft_image_2,
-    //     },
-    //     {
-    //         image: images.nft_image_3,
-    //     },
-    //     {
-    //         image: images.nft_image_1,
-    //     },
-    //     {
-    //         image: images.nft_image_2,
-    //     },
-    // ];
+    const collectionArray = [
+        {
+            image: images.nft_image_1,
+        },
+        {
+            image: images.nft_image_2,
+        },
+        {
+            image: images.nft_image_3,
+        },
+        {
+            image: images.nft_image_1,
+        },
+        {
+            image: images.nft_image_2,
+        },
+        {
+            image: images.nft_image_3,
+        },
+        {
+            image: images.nft_image_1,
+        },
+        {
+            image: images.nft_image_2,
+        },
+    ];
     return (
         <div className={Style.collection}>
             <Banner bannerImage={images.creatorbackground1} />
-            <CollectionProfile />
-            {/*<Filter />
+            <collectionProfile />
+            <Filter />
             <NFTCardTwo NFTData={collectionArray} />
-
             <Slider />
-            <Brand /> */}
+            <Brand /> 
         </div>
     );
 };
 
-export default collection;
+export default collection; 

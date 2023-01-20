@@ -12,7 +12,7 @@ const Banner = ({ bannerImage }) => {
                     src={bannerImage}
                     objectFit="cover"
                     alt="background"
-                    width={1600}
+                    width={2545}
                     height={300}
                 />
             </div>
@@ -31,3 +31,14 @@ const Banner = ({ bannerImage }) => {
 };
 
 export default Banner;
+
+
+// import React from 'react'
+
+// const Banner = () => {
+//     return (
+//         <div>Banner</div>
+//     )
+// }
+
+// export default Banner

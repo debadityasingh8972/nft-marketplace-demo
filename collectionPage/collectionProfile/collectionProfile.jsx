@@ -11,7 +11,7 @@ import {
 import Style from "./collectionProfile.module.css";
 import images from "../../img";
 
-const collectionProfile = () => {
+const CollectionProfile = () => {
     const cardArray = [1, 2, 3, 4];
     return (
         <div className={Style.collectionProfile}>
@@ -55,9 +55,9 @@ const collectionProfile = () => {
                             className={Style.collectionProfile_box_middle_box_item}
                             key={i + 1}
                         >
-                            {/* <small>Floor price</small> */}
-                            <small>${i + 1}95,4683</small>
-                            {/* <p>${i + 1}95,4683</p> */}
+                            <small>Floor price</small>
+                            {/* <small> ${i + 1}95,4683 </small> */}
+                            <p>${i + 1}95,4683</p>
                             <span>+ {i + 2}.11%</span>
                         </div>
                         ))}
@@ -68,4 +68,4 @@ const collectionProfile = () => {
     );
 };
 
-export default collectionProfile;
+export default CollectionProfile;
