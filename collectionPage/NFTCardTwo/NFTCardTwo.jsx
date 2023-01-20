@@ -65,7 +65,7 @@ const NFTCardTwo = ({ NFTData }) => {
                     <div className={Style.NFTCardTwo_box_price_box}>
                         <small>Current Bid</small>
                         {/* <p>{el.price || i + 4} ETH</p> */}
-                        <p>1{i+5}</p>
+                        <p>1{i+5}.000 ETH</p>
                     </div>
                     <p className={Style.NFTCardTwo_box_price_stock}>
                         <MdTimer /> <span>{i + 1} hours left</span>
