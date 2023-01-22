@@ -11,31 +11,31 @@ const Discover = () => {
   const discover = [
     {
       name: "Collection",
-      link: "collection"
+      link: "collection",
     },
     {
       name: "Search",
-      link: "search"
+      link: "searchPage",
     },
     {
       name: "Author Profile",
-      link: "author"
+      link: "author",
     },
     {
       name: "NFT Details",
-      link: "NFT-details"
+      link: "NFT-details",
     },
     {
       name: "Account Setting",
-      link: "account-setting"
+      link: "account-setting",
     },
     {
       name: "Connect Wallet",
-      link: "connect-wallet"
+      link: "connect-wallet",
     },
     {
       name: "Blog",
-      link: "blog"
+      link: "blog",
     }
 
   ];
