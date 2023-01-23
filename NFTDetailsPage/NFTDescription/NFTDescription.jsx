@@ -305,6 +305,7 @@ const NFTDescription = () => {
                         <NFTTabs dataTab={historyArray} />
                     </div>
                     )}
+                    
                     {provanance && (
                     <div className={Style.NFTDescription_box_profile_biding_box_card}>
                         <NFTTabs dataTab={provananceArray} />
