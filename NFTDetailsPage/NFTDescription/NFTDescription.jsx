@@ -181,7 +181,7 @@ const NFTDescription = () => {
                         <small>Creator</small> <br />
                         {/* <Link href={{ pathname: "/author", query: `${nft.seller}` }}> */}
                         <span>
-                            Karli Costa <MdVerified />
+                            Diego Costa <MdVerified />
                         </span>
                         {/* </Link> */}
                     </div>
