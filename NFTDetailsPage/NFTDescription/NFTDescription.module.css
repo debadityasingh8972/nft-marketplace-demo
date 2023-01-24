@@ -23,7 +23,7 @@
     position: absolute;
     top: 5rem;
     left: 65%;
-    width: 14rem;
+    width: 20rem;
     background-color: var(--main-bg-color);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
@@ -41,6 +41,7 @@
 
 .NFTDescription_box_share_box_social a:hover{
     background-color: var(--icons-color);
+    /* background-color: var(--box-shadow); */
     color: var(--main-bg-color);
     border-radius: .5rem;
     padding: .5rem .5rem;
@@ -158,7 +159,7 @@
 
 .NFTDescription_box_profile_biding_box_price_bid p{
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 
@@ -166,7 +167,7 @@
     margin-top: 3rem;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 3rem; 
 }
 
 .NFTDescription_box_profile_biding_box_tabs{
