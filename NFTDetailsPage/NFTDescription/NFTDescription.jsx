@@ -288,7 +288,7 @@ const NFTDescription = () => {
 
                     <Button
                         icon=<FaPercentage />
-                        btnName="Make offer"
+                        btnName="Place a Bid"
                         handleClick={() => {}}
                         classStyle={Style.button}
                     />
