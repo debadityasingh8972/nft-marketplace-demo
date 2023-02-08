@@ -22,15 +22,17 @@ import {
 // import { getTopCreators } from "../TopCreators/TopCreators";
 
 //IMPORTING CONTRCT DATA
-// import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home = () => {
-  /*
+  
+  // const {checkIfWalletConnected} = useContext(NFTMarketplaceContext);
+  
   const { checkIfWalletConnected } = useContext(NFTMarketplaceContext);
   useEffect(() => {
     checkIfWalletConnected();
   }, []);
-
+/*
   const { fetchNFTs } = useContext(NFTMarketplaceContext);
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
