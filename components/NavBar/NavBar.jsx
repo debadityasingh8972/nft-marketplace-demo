@@ -11,6 +11,7 @@ import Style from './NavBar.module.css';
 import {Discover, HelpCenter, Notification, Profile, SideBar} from './index'
 import {Button} from "../componentsindex";
 import images from "../../img";
+import { useRouter } from "next/router";
 
 //IMPORT FROM SMART CONTRACT
 import {NFTMarketplaceContext} from "../../Context/NFTMarketplaceContext";
@@ -23,6 +24,7 @@ const NavBar = () => {
   const [notification, setNotification] = useState(false);
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
+  const router = useRouter();
   
   const openMenu = (e)=> {
     const btnText = e.target.innerText;
@@ -135,13 +137,13 @@ const NavBar = () => {
             {currentAccount == "" ? (
               <Button btnName="Connect" handleClick={() => connectWallet()} />
             ) : (
-              <a href= "/uploadNFT">
+              // <a href= "/">
                 <Button
                   btnName="Create"
-                  handleClick={() => {}}
-                  //handleClick={() => router.push("/uploadNFT")}
+                  // handleClick={() => {}}
+                  handleClick={() => router.push("/uploadNFT")}
                 />
-              </a>
+              //{/* </a> */}
             )}
           </div>
 
@@ -175,7 +177,11 @@ const NavBar = () => {
       {
         openSideMenu && (
           <div className={Style.SideBar}>
-            <SideBar setOpenSideMenu={setOpenSideMenu}/>
+            <SideBar 
+              setOpenSideMenu = {setOpenSideMenu}
+              currentAccount = {currentAccount}
+              connectWallet = {connectWallet}
+            />
           </div>
         )
       }
