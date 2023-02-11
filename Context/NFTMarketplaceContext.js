@@ -10,8 +10,6 @@ import { create as ipfsHttpClient } from "ipfs-http-client";
 
 //We still need API Key
 
-
-
 const projectId = "Your Project Id";
 const projectSecretKey = "Your project secret Key";
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString(
