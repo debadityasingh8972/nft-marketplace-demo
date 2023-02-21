@@ -36,15 +36,17 @@ const Home = () => {
   const { fetchNFTs } = useContext(NFTMarketplaceContext);
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
-
+*/
   useEffect(() => {
-    fetchNFTs().then((items) => {
-      setNfts(items.reverse());
-      setNftsCopy(items);
-    });
+    if(currentAccount){
+      fetchNFTs().then((items) => {
+        setNfts(items.reverse());
+        setNftsCopy(items);
+      });
+    }
   }, []);
-
-  CREATOR LIST
+/*
+  //CREATOR LIST
   const creators = getTopCreators(nfts);
   console.log(creators);
 */

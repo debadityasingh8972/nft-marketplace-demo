@@ -13,13 +13,13 @@ const SearchBar = ({ onHandleSearch, onClearSearch }) => {
         return () => clearTimeout(timer);
     }, [searchItem]);
 
-    // useEffect(() => {
-    //     if (search) {
-    //         onHandleSearch(search);
-    //     } else {
-    //         onClearSearch();
-    //     }
-    // }, [search]);
+    useEffect(() => {
+        if (search) {
+            onHandleSearch(search);
+        } else {
+            onClearSearch();
+        }
+    }, [search]);
 
     return (
         <div className={Style.SearchBar}>
@@ -28,8 +28,8 @@ const SearchBar = ({ onHandleSearch, onClearSearch }) => {
                 <input
                     type="text"
                     placeholder="Type your keyword.."
-                    // onChange={(e) => setSearchItem(e.target.value)}
-                    // value={searchItem}
+                    onChange={(e) => setSearchItem(e.target.value)}
+                    value={searchItem}
                 />
                 <BsArrowRight className={Style.SearchBar_box_icon} />
             </div>
