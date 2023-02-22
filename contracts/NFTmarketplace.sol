@@ -14,9 +14,9 @@ contract NFTMarketplace is ERC721URIStorage{
     Counters.Counter private _tokenIds; //Every NFT have a unique ID
     Counters.Counter private _itemsSold; //Keeps the track of how many items are getting sold
 
-    uint256 listingPrice = 0.0025 ether;
+    uint256 listingPrice = 0.025 ether;
 
-    address payable owner; //Whoever will ddeloy the contract will become the owner of the smart contract
+    address payable owner; //Whoever will deploy the contract will become the owner of the smart contract
 
     mapping(uint256 => MarketItem) private idMarketItem;
 
@@ -49,7 +49,11 @@ contract NFTMarketplace is ERC721URIStorage{
     }
 
     function updateListingPrice(uint256 _listingPrice) public payable onlyOwner{
-
+        require(
+            owner == msg.sender,
+            "Only marketplace owner can update listing price."
+        );
+        listingPrice = _listingPrice;
     }
 
     function getListingPrice() public view returns (uint256) {
@@ -123,7 +127,7 @@ contract NFTMarketplace is ERC721URIStorage{
     }
 
     //GETTING UNSOLD NFT DATA
-    function fetchMarketItem() public view returns(MarketItem[] memory){
+    function fetchMarketItems() public view returns(MarketItem[] memory){
         uint256 itemCount = _tokenIds.current(); //How many NFTs are there in our NFT Marketplace
         uint256 unSoldItemCount = _tokenIds.current() - _itemsSold.current();
         uint256 currentIndex = 0;
@@ -142,7 +146,7 @@ contract NFTMarketplace is ERC721URIStorage{
     }
 
     //PURCHASE ITEM
-    function fetchMyNFT() public view returns(MarketItem[] memory){
+    function fetchMyNFTs() public view returns(MarketItem[] memory){
         uint256 totalCount = _tokenIds.current();
         uint256 itemCount = 0;
         uint256 currentIndex = 0;

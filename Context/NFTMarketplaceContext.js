@@ -287,9 +287,9 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchMyNFTsOrListedNFTs();
-  // }, []);
+  useEffect(() => {
+    fetchMyNFTsOrListedNFTs();
+  }, []);
 
   //---BUY NFTs FUNCTION
   const buyNFT = async (nft) => {
@@ -302,7 +302,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
       });
 
       await transaction.wait();
-      // router.push("/author");
+      router.push("/author");
     } catch (error) {
       setError("Error While buying NFT"); //console.log()
       setOpenError(true);

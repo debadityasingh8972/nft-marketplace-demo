@@ -37,6 +37,7 @@ const Home = () => {
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 */
+/*
   useEffect(() => {
     if(currentAccount){
       fetchNFTs().then((items) => {
