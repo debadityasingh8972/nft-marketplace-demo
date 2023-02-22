@@ -155,10 +155,11 @@ export const NFTMarketplaceProvider = ({ children }) => {
         const url = `https://infura-ipfs.io/ipfs/${added.path}`;
 
         await createSale(url, price);
+        router.push("/searchPage");
       } catch (error) {
         console.log(error)
       }
-      // router.push("/searchPage");
+      
   };
 
   //--- createSale FUNCTION
@@ -180,7 +181,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
           });
 
       await transaction.wait();
-      router.push('/searchPage')
+      // router.push('/searchPage');
 
       // console.log(transaction);
     } catch (error) {
