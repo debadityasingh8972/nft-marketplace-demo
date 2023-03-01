@@ -10,7 +10,7 @@ import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../img";
 
 //SMART CONTRACT IMPORT
-import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext, currentAccount } from "../Context/NFTMarketplaceContext";
 
 const searchPage = () => {
     const { fetchNFTs, setError } = useContext(NFTMarketplaceContext);
@@ -18,21 +18,17 @@ const searchPage = () => {
     const [nftsCopy, setNftsCopy] = useState([]);
 
     useEffect(() => {
-    //     fetchNFTs().then((items) => {
-    //         setNfts(items.reverse());
-    //         setNftsCopy(items);
-    //         console.log(nfts);
-    //     });
-    // }, []);
         try {
-            fetchNFTs().then((items) => {
-                setNfts(items.reverse());
-                setNftsCopy(items);
-            });
-            } catch (error) {
-                setError("Please reload the browser", error);
+            if (currentAccount) {
+                fetchNFTs().then((items) => {
+                    setNfts(items.reverse());
+                    setNftsCopy(items);
+                });
             }
-        }, []);
+        } catch (error) {
+            setError("Please reload the browser", error);
+        }
+    }, []);
 
     const onHandleSearch = (value) => {
         const filteredNFTS = nfts.filter(({ name }) =>
