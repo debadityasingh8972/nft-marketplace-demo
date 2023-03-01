@@ -78,7 +78,7 @@ const UploadNFT = ({ uploadToIPFS, createNFT }) => {
                     <label htmlFor="nft"> Item Name </label>
                     <input
                         type="text"
-                        placeholder="Uchiha Clan"
+                        placeholder="name"
                         className={formStyle.Form_box_input_userName}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -233,11 +233,11 @@ const UploadNFT = ({ uploadToIPFS, createNFT }) => {
                         }
                         classStyle={Style.upload_box_btn_style}
                     />
-                    <Button
+                    {/* <Button
                         btnName="Preview"
                         handleClick={() => {}}
                         classStyle={Style.upload_box_btn_style}
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

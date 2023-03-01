@@ -58,7 +58,7 @@ export const NFTMarketplaceContext = React.createContext();
 export const NFTMarketplaceProvider = ({ children }) => {
     const titleData = "Discover, collect, and sell NFTs";
 
-  //------USESTAT
+  //------USESTATE
     const [error, setError] = useState("");
     const [openError, setOpenError] = useState(false);
     const [currentAccount, setCurrentAccount] = useState("");
@@ -145,7 +145,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
       // const {name, description, price} = formInput;
 
       if (!name || !description || !price || !image)
-        return console.log("Data Is Missing");
+      return setError("Data Is Missing"), setOpenError(true);
 
       const data = JSON.stringify({ name, description, image });
     
@@ -157,7 +157,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
         await createSale(url, price);
         router.push("/searchPage");
       } catch (error) {
-        console.log(error)
+        setError("Error while creating NFT");
+        setOpenError(true);
       }
       
   };
@@ -320,12 +321,12 @@ export const NFTMarketplaceProvider = ({ children }) => {
             fetchNFTs,
             fetchMyNFTsOrListedNFTs,
             buyNFT,
-            // createSale,
+            createSale,
             currentAccount,
             titleData,
-            // setOpenError,
-            // openError,
-            // error,
+            setOpenError,
+            openError,
+            error,
         }}
         >
             {children}1

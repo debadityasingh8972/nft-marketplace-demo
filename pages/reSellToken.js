@@ -23,7 +23,7 @@ const reSellToken = () => {
 
     const { data } = await axios.get(tokenURI);
 
-    setPrice(data.price);
+    // setPrice(data.price);
     setImage(data.image);
     };
 
@@ -50,7 +50,7 @@ const reSellToken = () => {
                         min={1}
                         placeholder="reSell price"
                         className={formStyle.Form_box_input_userName}
-                        //onChange={(e) => setPrice(e.target.value)}
+                        onChange={(e) => setPrice(e.target.value)}
                     />
                 </div>
 

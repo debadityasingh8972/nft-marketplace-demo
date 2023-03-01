@@ -107,6 +107,7 @@ const author = () => {
                 nfts={nfts}
                 myNFTS={myNFTs}
             />
+            
             <Title
                 heading="Popular Creators"
                 paragraph="Click on music icon and enjoy NTF music or audio"

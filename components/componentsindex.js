@@ -16,5 +16,7 @@ import LikeProfile from "./LikeProfile/LikeProfile";
 import Slider from "./Slider/Slider";
 import Brand from "./Brand/Brand";
 import Video from "./Video/Video";
+import Loader from "./Loader/Loader";
+import Error from "./Error/Error";
 
-export{ Button, Footer, NavBar, HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, LikeProfile, Slider, Brand, Video};
+export{ Button, Footer, NavBar, HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, LikeProfile, Slider, Brand, Video, Loader, Error};

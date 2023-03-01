@@ -18,21 +18,21 @@ const searchPage = () => {
     const [nftsCopy, setNftsCopy] = useState([]);
 
     useEffect(() => {
-        fetchNFTs().then((items) => {
-            setNfts(items.reverse());
-            setNftsCopy(items);
-            console.log(nfts);
-        });
-    }, []);
-        // try {
-        //     fetchNFTs().then((items) => {
-        //         setNfts(items.reverse());
-        //         setNftsCopy(items);
-        //     });
-        //     } catch (error) {
-        //         setError("Please reload the browser", error);
-        //     }
-        // }, []);
+    //     fetchNFTs().then((items) => {
+    //         setNfts(items.reverse());
+    //         setNftsCopy(items);
+    //         console.log(nfts);
+    //     });
+    // }, []);
+        try {
+            fetchNFTs().then((items) => {
+                setNfts(items.reverse());
+                setNftsCopy(items);
+            });
+            } catch (error) {
+                setError("Please reload the browser", error);
+            }
+        }, []);
 
     const onHandleSearch = (value) => {
         const filteredNFTS = nfts.filter(({ name }) =>
@@ -70,8 +70,8 @@ const searchPage = () => {
                 onClearSearch={onClearSearch}
             />
             <Filter />
-            {/* {nfts.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />} */}
-            <NFTCardTwo NFTData = {nfts}/>
+            {nfts.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />}
+            {/* <NFTCardTwo NFTData = {nfts}/> */}
             <Slider />
             <Brand />
         </div>

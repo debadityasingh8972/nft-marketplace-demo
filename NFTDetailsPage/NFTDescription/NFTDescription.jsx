@@ -165,8 +165,8 @@ const NFTDescription = ({ nft }) => {
                 {/* //Part TWO */}
                 <div className={Style.NFTDescription_box_profile}>
                 <h1>
-                    {nft.name} #{nft.tokenId}
-                    {/* BearX #23453 */}
+                    {/* {nft.name} #{nft.tokenId} */}
+                    BearX #23453
                 </h1>
                 <div className={Style.NFTDescription_box_profile_box}>
                     <div className={Style.NFTDescription_box_profile_box_left}>

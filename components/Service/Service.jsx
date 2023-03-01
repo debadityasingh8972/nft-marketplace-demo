@@ -22,7 +22,7 @@ const Service = () => {
                 <p>
                     Connect with wallet, discover, buy NTFs, sell your NFTs and earn
                     money
-                </p>
+                </p>ssssssssssssssssssssssssssssssssssssssssssssssss
             </div>
 
             <div className={Style.service_box_item}>

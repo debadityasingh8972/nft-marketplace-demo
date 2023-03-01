@@ -29,8 +29,8 @@ const FollowerTabCard = ({ i, el }) => {
                 <div className={Style.FollowerTabCard_box_img}>
                     <Image
                         className={Style.FollowerTabCard_box_img_img}
-                        // src={el.background || images[`creatorbackground${i + 1}`]}
-                        src={el.background}
+                        src={el.background || images[`creatorbackground${i + 1}`]}
+                        // src={el.background}
                         alt="profile braground"
                         width={487}
                         height={300}
@@ -41,11 +41,11 @@ const FollowerTabCard = ({ i, el }) => {
                 <div className={Style.FollowerTabCard_box_profile}>
                     <Image
                         className={Style.FollowerTabCard_box_profile_img}
-                        src={el.user}
+                        // src={el.user}
                         alt="profile picture"
                         width={50}
                         height={50}
-                        // src={el.user || images[`user${i + 1}`]}
+                        src={el.user || images[`user${i + 1}`]}
                         
                     />
                 </div>
@@ -53,8 +53,8 @@ const FollowerTabCard = ({ i, el }) => {
                 <div className={Style.FollowerTabCard_box_info}>
                     <div className={Style.FollowerTabCard_box_info_name}>
                         <h4>
-                            Saske Uchiha
-                            {/* {el.seller.slice(0, 9)} */}
+                            {/* Saske Uchiha */}
+                            {el.seller.slice(0, 9)}
                             {""}{" "}
                             <span>
                                 <MdVerified />
