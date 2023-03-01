@@ -13,7 +13,7 @@ import {
 } from "../authorPage/componentIndex";
 
 //IMPORT SMART CONTRACT DATA
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
     const followerArray = [
@@ -68,30 +68,28 @@ const author = () => {
     const [following, setFollowing] = useState(false);
 
   //IMPORT SMART CONTRACT DATA
-    // const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(
-    //     NFTMarketplaceContext
-    // );
+    const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(NFTMarketplaceContext);
 
-    // const [nfts, setNfts] = useState([]);
-    // const [myNFTs, setMyNFTs] = useState([]);
+    const [nfts, setNfts] = useState([]);
+    const [myNFTs, setMyNFTs] = useState([]);
 
-    // useEffect(() => {
-    //     fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
-    //         setNfts(items);
-    //     });
-    // }, []);
+    useEffect(() => {
+        fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
+            setNfts(items);
+        });
+    }, []);
 
-    // useEffect(() => {
-    //     fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
-    //         setMyNFTs(items);
-    //     });
-    // }, []);
+    useEffect(() => {
+        fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
+            setMyNFTs(items);
+        });
+    }, []);
 
     return (
         <div className={Style.author}>
             <Banner bannerImage={images.creatorbackground2} />
-            <AuthorProfileCard />
-            {/* <AuthorProfileCard currentAccount={currentAccount} /> */}
+            {/* <AuthorProfileCard /> */}
+            <AuthorProfileCard currentAccount={currentAccount} />
             <AuthorTaps
                 setCollectiables={setCollectiables}
                 setCreated={setCreated}
@@ -106,9 +104,10 @@ const author = () => {
                 like={like}
                 follower={follower}
                 following={following}
-                // nfts={nfts}
-                // myNFTS={myNFTs}
+                nfts={nfts}
+                myNFTS={myNFTs}
             />
+            
             <Title
                 heading="Popular Creators"
                 paragraph="Click on music icon and enjoy NTF music or audio"

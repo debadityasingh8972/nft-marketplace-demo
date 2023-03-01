@@ -16,10 +16,10 @@ import {
   FollowerTab,
   Slider,
   Brand,
-  Video
-  // Loader,
+  Video,
+  Loader,
 } from "../components/componentsindex";
-// import { getTopCreators } from "../TopCreators/TopCreators";
+import { getTopCreators } from "../TopCreators/TopCreators";
 
 //IMPORTING CONTRCT DATA
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
@@ -32,22 +32,25 @@ const Home = () => {
   useEffect(() => {
     checkIfWalletConnected();
   }, []);
-/*
+
   const { fetchNFTs } = useContext(NFTMarketplaceContext);
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 
   useEffect(() => {
-    fetchNFTs().then((items) => {
-      setNfts(items.reverse());
-      setNftsCopy(items);
-    });
+    // if(currentAccount){
+      fetchNFTs().then((items) => {
+        setNfts(items.reverse());
+        setNftsCopy(items);
+        console.log(nfts);
+      });
+    // }
   }, []);
 
-  CREATOR LIST
+  //CREATOR LIST
   const creators = getTopCreators(nfts);
-  console.log(creators);
-*/
+  // console.log(creators);
+
   return (
     <div className={Style.homePage}>
       <HeroSection />      
@@ -58,20 +61,18 @@ const Home = () => {
         paragraph="Discover the most outstanding Audio NFTs."
       />
       <AudioLive />
-      {/*
+    
       {creators.length == 0 ? (
         <Loader />
       ) : (
         <FollowerTab TopCreator={creators} />
       )}
-      */}
       
       
       <Title
         heading="New Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
-      <FollowerTab />
       <Slider />
       <Collection />
       <Title
@@ -79,8 +80,8 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <Filter />
-      {/* {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />} */}
-      <NFTCard />
+      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
+      <NFTCard NFTData={nfts}/>
       <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."

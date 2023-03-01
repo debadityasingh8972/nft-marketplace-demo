@@ -53,6 +53,7 @@ import founder1 from "./founder1.jpg";
 import founder2 from "./founder2.jpg";
 import founder3 from "./founder3.jpg";
 import founder4 from "./founder4.jpg";
+import founder5 from "./founder5.jpg";
 import loader from "./loadergif.gif";
 import errorgif from "./error.gif";
 import transfer from "./transfer.gif";
@@ -64,6 +65,7 @@ export default {
   founder2,
   founder3,
   founder4,
+  founder5,
   provider1,
   provider2,
   provider3,

@@ -4,7 +4,7 @@ import { FaPercent } from "react-icons/fa";
 import { AiTwotonePropertySafety } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
 import Image from "next/image";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 //INTERNAL IMPORT
 import Style from "./UploadNFT.module.css";
@@ -13,8 +13,8 @@ import images from "../img";
 import { Button } from "../components/componentsindex.js";
 import { DropZone } from "../UploadNFT/uploadNFTIndex.js";
 
-// const UloadNFT = ({ uploadToIPFS, createNFT }) => {
-const UploadNFT = () => {
+const UploadNFT = ({ uploadToIPFS, createNFT }) => {
+// const UploadNFT = () => {
     const [price, setPrice] = useState("");
     const [active, setActive] = useState(0);
     const [name, setName] = useState("");
@@ -26,7 +26,7 @@ const UploadNFT = () => {
     const [properties, setProperties] = useState("");
     const [image, setImage] = useState(null);
 
-    // const router = useRouter();
+    const router = useRouter();
 
     const categoryArry = [
         {
@@ -68,9 +68,9 @@ const UploadNFT = () => {
                 fileSize={fileSize}
                 category={category}
                 properties={properties}
-                image={images.upload}
-                // setImage={setImage}
-                // uploadToIPFS={uploadToIPFS}
+                // image={images.upload}
+                setImage={setImage}
+                uploadToIPFS={uploadToIPFS}
             />
 
             <div className={Style.upload_box}>
@@ -78,7 +78,7 @@ const UploadNFT = () => {
                     <label htmlFor="nft"> Item Name </label>
                     <input
                         type="text"
-                        placeholder="Uchiha Clan"
+                        placeholder="name"
                         className={formStyle.Form_box_input_userName}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -216,28 +216,28 @@ const UploadNFT = () => {
                 <div className={Style.upload_box_btn}>
                     <Button
                         btnName="Upload"
-                        handleClick={() => {}}
-                        // handleClick={async () =>
-                        // createNFT(
-                        //     name,
-                        //     price,
-                        //     image,
-                        //     description,
-                        //     router
-                        //     // website,
-                        //     // royalties,
-                        //     // fileSize,
-                        //     // category,
-                        //     // properties
-                        // )
-                        // }
+                        // handleClick={() => {}}
+                        handleClick={async () =>
+                        createNFT(
+                            name,
+                            price,
+                            image,
+                            description,
+                            router,
+                            // website,
+                            // royalties,
+                            // fileSize,
+                            // category,
+                            // properties
+                        )
+                        }
                         classStyle={Style.upload_box_btn_style}
                     />
-                    <Button
+                    {/* <Button
                         btnName="Preview"
                         handleClick={() => {}}
                         classStyle={Style.upload_box_btn_style}
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

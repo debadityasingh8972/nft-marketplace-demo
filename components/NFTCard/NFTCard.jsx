@@ -8,7 +8,7 @@ import Link from "next/link";
 import Style from "./NFTCard.module.css";
 import images from "../../img";
 
-const NFTCard = () => {
+const NFTCard = ( {NFTData} ) => {
     // const featureArray = [1,2,3,4,5,6,7,8,9];
     const CardArray = [
         images.nft_image_1,
@@ -35,13 +35,13 @@ const NFTCard = () => {
   // console.log(NFTData);
     return (
         <div className={Style.NFTCard}>
-            {CardArray.map((el, i) => (
-                // <Link href={{ pathname: "/NFT-details", query: el }}>
+            {NFTData.map((el, i) => (
+                <Link href={{ pathname: "/NFT-details", query: el }}>
                 <div className={Style.NFTCard_box} key={i + 1}>
                     <div className={Style.NFTCard_box_img}>
                         <Image
                             // src={images.nft_image_1}
-                            src={el}
+                            src={el.image}
                             alt="NFT images"
                             width={600}
                             height={600}
@@ -97,7 +97,7 @@ const NFTCard = () => {
             </div>
         </div>
     </div>
-// </Link>
+    </Link>
     ))}
 </div>
 );

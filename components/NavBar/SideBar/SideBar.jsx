@@ -186,13 +186,19 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        {currentAccount == "" ? (
-          <Button btnName="connect" handleClick={() => connectWallet()} />
+        {
+          currentAccount == "" ? (
+            <Button btnName="connect" handleClick={() => connectWallet()} />
         ) : (
           <Button
             btnName="Create"
             handleClick={() => router.push("/uploadNFT")}
           />
+          // <a href="/uploadNFT">
+          //   <Button btnName="Create" handleClick={() => {}}/>
+          // </a>
+            
+          
         )}
 
         <Button btnName="Connect Wallet" handleClick={() => {}} />
