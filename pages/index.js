@@ -25,10 +25,10 @@ import { getTopCreators } from "../TopCreators/TopCreators";
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home = () => {
-  
+
   // const {checkIfWalletConnected} = useContext(NFTMarketplaceContext);
   
-  const { checkIfWalletConnected, currentAccount } = useContext(NFTMarketplaceContext);
+  const { checkIfWalletConnected } = useContext(NFTMarketplaceContext);
   useEffect(() => {
     checkIfWalletConnected();
   }, []);
@@ -38,11 +38,10 @@ const Home = () => {
   const [nftsCopy, setNftsCopy] = useState([]);
 
   useEffect(() => {
-    if(currentAccount){
+    // if(currentAccount){
       fetchNFTs().then((items) => {
         setNfts(items.reverse());
         setNftsCopy(items);
-        console.log(nfts);
       });
     }
   }, []);
@@ -53,7 +52,7 @@ const Home = () => {
 
   return (
     <div className={Style.homePage}>
-      <HeroSection />      
+      <HeroSection />
       <Service />
       <BigNFTSlider />
       <Title
@@ -61,14 +60,14 @@ const Home = () => {
         paragraph="Discover the most outstanding Audio NFTs."
       />
       <AudioLive />
-    
+
       {creators.length == 0 ? (
         <Loader />
       ) : (
         <FollowerTab TopCreator={creators} />
       )}
-      
-      
+
+
       <Title
         heading="New Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
@@ -81,7 +80,7 @@ const Home = () => {
       />
       <Filter />
       {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
-      <NFTCard NFTData={nfts}/>
+      <NFTCard NFTData={nfts} />
       <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."
@@ -89,7 +88,7 @@ const Home = () => {
       <Category />
       <Subscribe />
       <Brand />
-      <Video /> 
+      <Video />
     </div>
   );
 };

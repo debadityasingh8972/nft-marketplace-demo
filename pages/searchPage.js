@@ -18,23 +18,14 @@ const searchPage = () => {
     const [nftsCopy, setNftsCopy] = useState([]);
 
     useEffect(() => {
-    //     fetchNFTs().then((items) => {
-    //         setNfts(items.reverse());
-    //         setNftsCopy(items);
-    //         console.log(nfts);
-    //     });
-    // }, []);
         try {
-            if(currentAccount) {
-                fetchNFTs().then((items) => {
-                    setNfts(items.reverse());
-                    setNftsCopy(items);
-                    // console.log(nfts);
-                });
+            fetchNFTs().then((items) => {
+                setNfts(items.reverse());
+                setNftsCopy(items);
+            });
+            } catch (error) {
+                setError("Please reload the browser", error);
             }
-        } catch (error) {
-            setError("Please reload the browser", error);
-        }
         }, []);
 
         // }, []);
