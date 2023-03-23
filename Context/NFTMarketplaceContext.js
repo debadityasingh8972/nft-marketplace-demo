@@ -112,8 +112,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
   const uploadToIPFS = async (file) => {
     try {
       const added = await client.add({ content: file });
-      const url = `${subdomain}/ipfs/${added.path}`;
-      // const url = `https://ipfs.infura.io:/ipfs/${added.path}`;
+      // const url = `${subdomain}/ipfs/${added.path}`;
+      const url = `https://ipfs.infura.io:/ipfs/${added.path}`;
       return url;
     } catch (error) {
       setError("Error Uploading to IPFS");
@@ -143,6 +143,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
   const createNFT = async (name, price, image, description, router) => {
   
       // const {name, description, price} = formInput;
+      console.log(auth,client);
 
       if (!name || !description || !price || !image)
       return setError("Data Is Missing"), setOpenError(true);
@@ -152,8 +153,9 @@ export const NFTMarketplaceProvider = ({ children }) => {
       try {
         const added = await client.add(data);
 
-        const url = `https://infura-ipfs.io/ipfs/${added.path}`;
+        const url = `https://let-nft-marketplace.infura-ipfs.io/ipfs/${added.path}`;
 
+        // await createSale(url, price);
         await createSale(url, price);
         router.push("/searchPage");
       } catch (error) {
@@ -186,7 +188,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
       // console.log(transaction);
     } catch (error) {
-      setError("error while creating sale");
+      // setError("error while creating sale");
       setOpenError(true);
     }
   };
