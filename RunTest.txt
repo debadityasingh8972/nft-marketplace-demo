@@ -1,0 +1,12 @@
+Make Sure you have hardhat installed in your system. If not run "npm install hardhat" command in terminal. 
+
+Split the terminal in two.
+Step 1 -> In one terminal Run "npx hardhat node" command to get local blockchain and 20 free accounts with 10000 Test-Ethers with private keys. (alternative Ganache)
+Step 2 -> In other terminal Run "npx hardhat run scripts/deploy.js --network localhost" to deploy the Smart Contract on the local network & connect with the blockchain.
+Step 3 -> Run "npm run dev" to start the localhost.
+
+
+*** IMPORTANT ***
+Remember to delete artifacts, cache & NFTMarketplace.json file from Context folder every time you close to start the project.
+After step 1 & step 2 (after smart contract connects with local blockchain) remember to drag "NFTMarketplace.json" file from 'artifacts/contracts/NFTMarketplace.json' to Context folder.
+Then start the localhost

@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "delete": "rimraf artifacts && rimraf cache && rimraf Context/NFTMarketplace.json",
+    "move": "mv artifacts/contracts/NFTmarketplace.sol/NFTMarketplace.json Context/",
+    "contract": "npx hardhat run scripts/deploy.js --network localhost",
+    "step1": "npm run delete && npx hardhat node",
+    "step2": "npm run contract && npm run move && npm run dev"
+
+
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.1",
@@ -14,11 +21,13 @@
     "ether": "^0.0.9",
     "framer-motion": "^8.4.3",
     "ipfs-http-client": "^60.0.0",
+    "mv": "^2.1.1",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.7.1",
+    "rimraf": "^4.4.1",
     "web3modal": "^1.9.12"
   },
   "devDependencies": {

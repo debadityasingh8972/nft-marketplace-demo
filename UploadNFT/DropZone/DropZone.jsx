@@ -27,7 +27,7 @@ const DropZone = ({
         setFileUrl(url);
         setImage(url);
         console.log(url);
-        setFileUrl(acceptedFile[0]);
+        // setFileUrl(acceptedFile[0]);
     });
 
     const { getRootProps, getInputProps } = useDropzone({
