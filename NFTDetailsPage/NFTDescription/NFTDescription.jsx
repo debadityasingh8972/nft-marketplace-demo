@@ -36,6 +36,8 @@ const NFTDescription = ({ nft }) => {
     const [history, setHistory] = useState(true);
     const [provanance, setProvanance] = useState(false);
     const [owner, setOwner] = useState(false);
+    // const [seller, setSeller] = useState(false);
+
 
     const router = useRouter();
 
@@ -120,23 +122,23 @@ const NFTDescription = ({ nft }) => {
                     />
 
                     {social && (
-                    <div className={Style.NFTDescription_box_share_box_social}>
-                        <a href="#">
-                        <TiSocialFacebook /> Facebook
-                        </a>
-                        <a href="#">
-                        <TiSocialInstagram /> Instragram
-                        </a>
-                        <a href="#">
-                        <TiSocialLinkedin /> LinkedIn
-                        </a>
-                        <a href="#">
-                        <TiSocialTwitter /> Twitter
-                        </a>
-                        <a href="#">
-                        <TiSocialYoutube /> YouTube
-                        </a>
-                    </div>
+                        <div className={Style.NFTDescription_box_share_box_social}>
+                            <a href="#">
+                            <TiSocialFacebook /> Facebook
+                            </a>
+                            <a href="#">
+                            <TiSocialInstagram /> Instragram
+                            </a>
+                            <a href="#">
+                            <TiSocialLinkedin /> LinkedIn
+                            </a>
+                            <a href="#">
+                            <TiSocialTwitter /> Twitter
+                            </a>
+                            <a href="#">
+                            <TiSocialYoutube /> YouTube
+                            </a>
+                        </div>
                     )}
 
                     <BsThreeDots
@@ -179,7 +181,7 @@ const NFTDescription = ({ nft }) => {
                     />
                     <div className={Style.NFTDescription_box_profile_box_left_info}>
                         <small>Creator</small> <br />
-                        <Link href={{ pathname: "/author", query: `${nft.seller}` }}>
+                        <Link href={{ pathname: "/author", query: `{nft.seller}` }}>
                             <span>
                                 Diego Costa <MdVerified />
                             </span>
@@ -252,12 +254,12 @@ const NFTDescription = ({ nft }) => {
                         }
                     >
                         <small>Current Bid</small>
-                        <p>
-                        {nft.price} ETH <span>( ≈ $3,221.22)</span>
-                        </p>
                         {/* <p>
-                        1.000 ETH <span>( ≈ $3,221.22)</span>
+                        {nft.price} ETH <span>( ≈ $3,221.22)</span>
                         </p> */}
+                        <p>
+                        1.000 ETH <span>( ≈ $3,221.22)</span>
+                        </p>
                     </div>
 
                     <span>[96 in stock]</span>

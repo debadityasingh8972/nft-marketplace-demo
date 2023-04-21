@@ -198,7 +198,16 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   const fetchNFTs = async () => {
     try {
-      if (currentAccount) {
+      const accounts = await window.ethereum.request({
+        method: "eth_accounts",
+      });
+      if (accounts.length) {
+        setCurrentAccount(accounts[0]);
+      } else {
+        setError("No Account Found");
+        setOpenError(true);
+      }
+      if (accounts[0]) {
         const provider = new ethers.providers.JsonRpcProvider();
         const contract = fetchContract(provider);
 
