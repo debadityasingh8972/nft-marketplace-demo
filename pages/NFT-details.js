@@ -22,15 +22,14 @@ const NFTDetails = () => {
 
     const router = useRouter();
     useEffect(() => {
-        if (router.query !== {}) {
-            console.log(router.query, "query");
+        if (router.query.name !== undefined) {
+            setNft(router.query)
         }
     }, [router.isReady]);
 
     return (
         <div>
             <NFTDetailsPage nft={nft} />
-            {/* <NFTDetailsPage/> */}
             <Category />
             <Brand />
         </div>

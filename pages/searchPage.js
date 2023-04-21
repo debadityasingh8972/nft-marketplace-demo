@@ -28,14 +28,6 @@ const searchPage = () => {
             }
         }, []);
 
-        // }, []);
-            // fetchNFTs().then((items) => {
-            //     setNfts(items.reverse());
-            //     setNftsCopy(items);
-            // });
-            // } catch (error) {
-            //     setError("Please reload the browser", error);
-            // }
 
     const onHandleSearch = (value) => {
         const filteredNFTS = nfts.filter(({ name }) =>

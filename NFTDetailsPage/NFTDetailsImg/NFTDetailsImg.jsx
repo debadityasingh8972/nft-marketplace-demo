@@ -59,8 +59,8 @@ const NFTDetailsImg = ({ nft }) => {
 
                     <div className={Style.NFTDetailsImg_box_NFT_img}>
                         <Image
-                            // src={nft.image}
-                            src={images.nft_image_1}
+                            src={nft.image}
+                            // src={images.nft_image_1}
                             className={Style.NFTDetailsImg_box_NFT_img_img}
                             alt="NFT image"
                             width={800}
@@ -80,8 +80,8 @@ const NFTDetailsImg = ({ nft }) => {
 
                 {description && (
                     <div className={Style.NFTDetailsImg_box_description_box}>
-                        {/* <p>{nft.description}</p> */}
-                        <p>Tatooed Kitty Gang ("TKG") is a collection of 566 badass kitty gangstars, with symbol of tattoos, living in the Proud Kitty Gang("PKG") metaverse. Each TKG is an 1/1 ID as gangster member & all the joint rights. </p>
+                        <p>{nft.description}</p>
+                        {/* <p>Tatooed Kitty Gang ("TKG") is a collection of 566 badass kitty gangstars, with symbol of tattoos, living in the Proud Kitty Gang("PKG") metaverse. Each TKG is an 1/1 ID as gangster member & all the joint rights. </p> */}
                     </div>
                 )}
 
@@ -99,13 +99,12 @@ const NFTDetailsImg = ({ nft }) => {
                     <p>
                         <small>Contract Address</small>
                         <br></br>
-                        {/* {nft.seller} */}
+                        {nft.seller}
                     </p>
                     <p>
                         <small>Token ID</small>
-                        {/* &nbsp; &nbsp; {nft.tokenId} */}
-                        {/* {nft.tokenId} */}
-                        5126t890U009
+                        &nbsp; &nbsp; {nft.tokenId}
+                        {nft.tokenId}
                     </p>
                 </div>
                 )}
