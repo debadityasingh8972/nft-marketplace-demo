@@ -264,7 +264,7 @@ const NFTDescription = ({ nft }) => {
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_button}>
-              {currentAccount == `{nft.seller.toLowerCase()}`} ? (
+              {currentAccount == nft.seller.toLowerCase() ? (
               <p>You can't buy your own NFT</p>
               ) : currentAccount == nft.owner.toLowerCase() ? (
               <Button
@@ -284,7 +284,7 @@ const NFTDescription = ({ nft }) => {
                 handleClick={() => buyNFT(nft)}
                 classStyle={Style.button}
               />
-              )
+              )}
               <Button
                 icon=<FaPercentage />
                 btnName="Make offer"

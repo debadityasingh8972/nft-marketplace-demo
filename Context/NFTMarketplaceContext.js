@@ -307,6 +307,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   //---BUY NFTs FUNCTION
   const buyNFT = async (nft) => {
+    console.log(4);
     try {
       const contract = await connectingWithSmartContract();
       const price = ethers.utils.parseUnits(nft.price.toString(), "ether");
