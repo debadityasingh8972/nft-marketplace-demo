@@ -72,18 +72,19 @@ const author = () => {
 
     const [nfts, setNfts] = useState([]);
     const [myNFTs, setMyNFTs] = useState([]);
+    
+    useEffect(() => {
+        fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
+            setMyNFTs(items);
+        });
+    }, [myNFTs.length]);
 
     useEffect(() => {
         fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
             setNfts(items);
         });
-    }, []);
+    }, [nfts.length]);
 
-    useEffect(() => {
-        fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
-            setMyNFTs(items);
-        });
-    }, []);
 
     return (
         <div className={Style.author}>
@@ -105,7 +106,7 @@ const author = () => {
                 follower={follower}
                 following={following}
                 nfts={nfts}
-                myNFTS={myNFTs}
+                myNFTs={myNFTs}
             />
             
             <Title

@@ -7,7 +7,6 @@ import Style from "./NFTDetailsPage.module.css";
 const NFTDetailsPage = ({ nft }) => {
 
     useEffect(() => {
-        console.log(nft, "nft");
     }, [nft]);
 
     return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //INTERNAL IMPORT
 import Style from "./AuthorNFTCardBox.module.css";
@@ -33,6 +33,12 @@ const AuthorNFTCardBox = ({
     //     images.nft_image_3,
     //     images.nft_image_1,
     // ];
+
+    const [testNFTs, setestNFTs] = useState([])
+
+    useEffect(() => {
+        console.log(myNFTs);
+    }, [myNFTs])
 
     const likeArray = [
         images.nft_image_1,
@@ -102,11 +108,13 @@ const AuthorNFTCardBox = ({
             seller: "d84ff74hf99999f9974hf774f99f",
         },
     ];
+
+
     return (
         <div className={Style.AuthorNFTCardBox}>
-            {collectiables && <NFTCardTwo NFTData = {nfts} />}
-            {created && <NFTCardTwo NFTData = {myNFTs} />}
-            {like && <NFTCardTwo NFTData = {nfts} />}
+            {collectiables && <NFTCardTwo NFTData={nfts} />}
+            {created && <NFTCardTwo NFTData={myNFTs} />}
+            {like && <NFTCardTwo NFTData={nfts} />}
             {follower && (
                 <div className={Style.AuthorNFTCardBox_box}>
                     {followerArray.map((el, i) => (

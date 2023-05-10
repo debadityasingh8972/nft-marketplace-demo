@@ -259,7 +259,10 @@ export const NFTMarketplaceProvider = ({ children }) => {
   //--FETCHING MY NFT OR LISTED NFTs
   const fetchMyNFTsOrListedNFTs = async (type) => {
     try {
-      if (currentAccount) {
+      const accounts = await window.ethereum.request({
+        method: "eth_accounts",
+      });
+      if (accounts[0]) {
         const contract = await connectingWithSmartContract();
 
         const data =
@@ -307,7 +310,6 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   //---BUY NFTs FUNCTION
   const buyNFT = async (nft) => {
-    console.log(4);
     try {
       const contract = await connectingWithSmartContract();
       const price = ethers.utils.parseUnits(nft.price.toString(), "ether");
