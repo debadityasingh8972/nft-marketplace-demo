@@ -7,7 +7,7 @@ Try running some of the following tasks:
 ```shell
 run npm install
 open package.json or scripts
-run npm step1 and wait for it to complete
+run npm step1 
 run npm step2 
 head to http://localhost:3000
 ```
