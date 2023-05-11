@@ -5,9 +5,9 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+run npm install
+open package.json or scripts
+run npm step1 and wait for it to complete
+run npm step2 
+head to http://localhost:3000
 ```
