@@ -11,7 +11,7 @@
     "move": "mv artifacts/contracts/NFTmarketplace.sol/NFTMarketplace.json Context/",
     "contract": "npx hardhat run scripts/deploy.js --network localhost",
     "step1": "npm run delete && npx hardhat node",
-    "step2": "npm run contract && npm run move && npm run dev -- -H 192.168.176.246"
+    "step2": "npm run contract && npm run move && npm run dev"
 
 
   },
